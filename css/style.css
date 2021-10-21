@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+    --primary-color: rgb(177, 0, 38);
+    --secondary-color: rgb(3, 66, 124);
+    --gray: #333;
+    --white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body, html {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+}
+
+
+nav {
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    /* height: 1rem; */
+}
+
+.nav-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-list-items {
+    padding: 15px 20px;
+}
+
+
+.nav-list-items > a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.brand-name {
+    display: flex;
+    justify-content: center;
+}
+
+#nav-btn {
+    cursor: pointer;
+}
+
+
+#hided-items {
+    transition: 0.5s;
+}
+
+
+.right {
+    margin-left: auto;
+}
+
+.hide {
+    height: 0;
+    overflow: hidden;
+    /* display: none; */
+}
+
+
+
+
+.showcase {
+    height: 60vh;
+    background-image: url(../img/showcase.jpg);
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+}
+
+
+.showcase-inner {
+    width: 90%;
+    margin: auto;
+}
+
+
+
+.music {
+    background-color: var(--gray);
+    color: #fff;
+    text-align: center;
+    padding: 50px 25px;
+}
+
+.music > h3 {
+    font-size: 2.6em;
+    margin: 0;
+}
+
+.music > p {
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.music > h4,
+.video > h4 {
+    font-size: 2em;
+}
+
+.btn {
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #4545;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    margin-top: 10px;
+}
+
+.mockup {
+    width: 100%;
+    margin-top: 20px;  
+    display: block;
+}
+
+/* .music > img {
+    width: 100%;
+    margin-top: 20px;
+} */
+
+
+.video {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 50px 25px;
+    text-align: center;
+}
+
+.video > p {
+    font-size: 1.2em;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+
+
+/* .video > img {
+    width: 100%;
+} */
+
+.info {
+    background-image: url('../img/section-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 250px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+
+.info > p {
+    font-size: 1.35em;
+    margin: 0 15px;
+}
+
+.cards {
+    padding: 20px;
+    color: #333;
+    background: #f4f4f4;
+}
+
+.card-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cards h5 {
+    font-size: 1.5em;
+}
+
+
+.cards  img {
+    width: 100%;
+}
+
+.link {
+    color: blue;
+    text-decoration: none;
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgba(126, 126, 126, 0.432);
+    padding: 10px 0;
+}
+
+
+.main-footer {
+    display: none;
+    background-color: #1e2127;  
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
+    grid-column-gap: 50px;
+    margin: auto;
+    width: 80%;
+    color: #fff;
+    padding-bottom: 25px;
+}
+
+.footer-link-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link-list-items {
+    padding-bottom: 6.5px;
+    font-size: 0.9em;
+}
+
+.footer-link-list-items > a {
+    color: rgb(143, 140, 140);
+    text-decoration: none;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+@media only screen and (min-width: 950px) {
+    .nav-list {
+        display: flex;
+    }
+
+    .showcase {
+        height: 100vh;
+        font-size: 1.3rem;
+    }
+    
+    .showcase p {
+        font-weight: 300;
+        font-size: 1.23em;
+    }
+
+    .showcase h1 {
+        font-size: 3em;
+    }
+
+
+
+    .hide {
+        height: 2.5em;
+        display: flex;
+    }
+
+
+
+    .nav-list-items:last-child {
+        order: -1;
+    }
+
+    .mockup {
+        width: 80%;
+        margin: auto;
+    }
+
+    .info {
+        padding: 150px;
+    }
+
+    .card-inner {
+        flex-direction: row;
+        width: 70%;
+        margin: auto;
+    }
+
+    .cards img {
+        width: 500px;
+    }
+
+    .main-footer {
+        display: block;
+    }
+    
+    .hide-lg {
+        display: none;
+    }
+}
